@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Poker Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <div id="screen"><div style="font-family:monospace;color:#ffcf4a;background:#120e1d;padding:20px;max-width:560px;margin:40px auto;border:4px solid #ffcf4a">Loading Pixel Poker...<br><br>If this message stays, the game files were not found. Extract the whole zip first (right-click, Extract All), then open index.html from the extracted folder so it sits next to the css and js folders.</div></div>
+
+  <div id="game" class="hidden">
+    <div id="play"><div id="stage">
+      <canvas id="cv" width="640" height="360"></canvas>
+      <div id="hud-top">
+        <span id="hud-casino"></span><span id="hud-info"></span><span class="sp"></span>
+        <button id="b-aid" title="Toggle training aids">AIDS</button>
+        <button id="b-set">SETTINGS</button>
+        <button id="b-leave">LEAVE</button>
+      </div>
+      <div id="tip" class="hidden"></div>
+    </div>
+    <div id="side"><div id="aid" class="hidden"></div><div id="hlog"></div></div>
+    </div>
+    <div id="ctl">
+      <div id="ctl-info"></div>
+      <div id="ctl-act" class="hidden">
+        <button id="b-fold">FOLD (F)</button>
+        <button id="b-call">CALL (C)</button>
+        <button id="b-raise">RAISE (R)</button>
+        <div id="rz">
+          <input type="range" id="r-range" min="0" max="100" step="1" value="0">
+          <input type="number" id="r-num" min="0" step="1" value="0">
+          <button id="q-min">MIN</button><button id="q-half">1/2 POT</button><button id="q-3q">3/4 POT</button><button id="q-pot">POT</button><button id="q-all">ALL-IN</button>
+        </div>
+      </div>
+      <div id="ctl-next" class="hidden">
+        <button id="b-next" class="go">NEXT HAND (SPACE)</button>
+        <button id="b-chips">ADD CHIPS</button>
+      </div>
+      <div id="ctl-wait">Waiting for the next action...</div>
+    </div>
+  </div>
+
+  <div id="modal" class="hidden"></div>
+  <div id="toast"></div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/poker.js"></script>
+<script src="js/personalities.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/game.js"></script>
+<script src="js/career.js"></script>
+<script src="js/render.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/coach.js"></script>
+<script src="js/session.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/training.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
